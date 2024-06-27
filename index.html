@@ -46,6 +46,14 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Initial position */
+            transition: opacity 1s, transform 1s; /* Animation settings */
+        }
+
+        section.visible {
+            opacity: 1; /* Fade in */
+            transform: translateY(0); /* Move to final position */
         }
 
         #home {
@@ -107,6 +115,23 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Intersection Observer API to detect visibility
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe each section
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
