@@ -1,2 +1,113 @@
-<h1>hii Welcomr I am SK</h1>
-<h1>this is my first git hub websit</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #f8b400;
+        }
+
+        #about {
+            background-color: #f85f73;
+        }
+
+        #projects {
+            background-color: #6a0572;
+        }
+
+        #contact {
+            background-color: #0b4f6c;
+        }
+
+        section h1 {
+            font-size: 3em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+    </section>
+    
+    <section id="about">
+        <h1>About Me</h1>
+        <p>This is the about section.</p>
+    </section>
+    
+    <section id="projects">
+        <h1>My Projects</h1>
+        <p>This is the projects section.</p>
+    </section>
+    
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>This is the contact section.</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
