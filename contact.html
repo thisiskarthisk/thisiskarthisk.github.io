@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact - FolioOne Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <style>
+    /* .info-link { text-decoration: none; transition: 0.3s; } */
+
+    .github-link{ color: #0077B5; font-weight: bold; } /* Blue */
+    .linkedin-link{ color: #0077B5; font-weight: bold; } /* Blue */
+    .email-link{ color: #0077B5; font-weight: bold; } /* Blue */
+    
+    /* Result Message Styling */
+    #result {
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 4px;
+      display: none; /* Hidden by default */
+    } -->
+  <!-- </style> -->
+</head>
+
+<body class="contact-page">
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <main class="main">
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>You can connect with me using the platforms below.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <div class="info-item">
+                <div class="icon-box"><i class="bi bi-github"></i></div>
+                <div class="content">
+                  <h4>GitHub</h4>
+                  <p><a href="https://github.com/thisiskarthisk" target="_blank" id="github-link" class="info-link github-link">github.com/thisiskarthisk</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-box"><i class="bi bi-linkedin"></i></div>
+                <div class="content">
+                  <h4>LinkedIn</h4>
+                  <p><a href="https://www.linkedin.com/in/sathiya-karthick/" target="_blank" id="linkedin-link" class="info-link linkedin-link">linkedin.com/in/sathiya-karthick</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-box"><i class="bi bi-envelope"></i></div>
+                <div class="content">
+                  <h4>Email</h4>
+                  <p><a href="mailto:sathiyakarthick.r@gmail.com" target="_blank" id="email-link" class="info-link email-link">sathiyakarthick.r@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+
+              <form id="contact-form">
+                <input type="hidden" name="access_key" value="d0baa84b-3ddf-48bd-88b9-c22566b234cd">
+                
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <!-- phone -->
+                  <div class="col-md-6">
+                    <input type="text" name="phone" class="form-control" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="10 Digits" >
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-6">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <div id="result"></div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="background: #0077B5; border: none; padding: 10px 30px; color: white;">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Including -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script>
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('result');
+    const btn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      btn.disabled = true;
+      result.style.display = "block";
+      result.innerHTML = "Sending...";
+      result.style.color = "blue";
+
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: json
+      })
+      .then(async (response) => {
+          if (response.status == 200) {
+              result.innerHTML = "✔ Success! Message sent to Sathiya.";
+              result.style.color = "green";
+              form.reset();
+          } else {
+              result.innerHTML = "❌ Error occurred. Please try again.";
+              result.style.color = "red";
+          }
+      })
+      .catch(error => {
+          result.innerHTML = "Something went wrong!";
+          result.style.color = "red";
+      })
+      .then(function() {
+          btn.disabled = false;
+          setTimeout(() => { result.style.display = "none"; }, 5000);
+      });
+    });
+  </script>
+</body>
+
+</html>
