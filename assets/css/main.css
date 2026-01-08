@@ -2868,3 +2868,51 @@ section,
   border-radius: 4px;
   display: none; /* Hidden by default */
 }
+
+
+.skill-item{
+  margin-bottom:24px;
+  font-family:'Poppins',sans-serif;
+}
+
+.skill-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:6px;
+}
+
+.skill-name{
+  color:#bfe9ff;
+  font-size:15px;
+}
+
+.skill-percent{
+  color:#38bdf8;
+  font-weight:600;
+  font-size:14px;
+}
+
+.progress{
+  height:7px;
+  background:#0e2b3a;
+  border-radius:50px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+  border-radius:50px;
+  width:0;
+}
+
+/* optional smooth animation */
+.skills-animation .progress-bar{
+  animation:fillBar 1.2s ease forwards;
+}
+
+@keyframes fillBar{
+  from{ width:0; }
+  to{ width:attr(aria-valuenow percentage); } /* modern browsers */
+}
